@@ -3,9 +3,9 @@
 
 /* Global Styling */
 :root {
-    --white: ; /* Define your main color variable */
-    --black: ; /* Define your secondary color variable */
-    --green: ; /* Define your tertiary color variable */
+    --white: white; /* Define your main color variable */
+    --black: black; /* Define your secondary color variable */
+    --green: green; /* Define your tertiary color variable */
     --box-shadow: ; /* Define your box shadow variable */
 }
 
@@ -13,111 +13,113 @@
 *,
 *::after,
 *::before { 
-    /* padding: 0;
+    padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Lato', sans-serif; */
+    font-family: 'Lato', sans-serif;
 }
 
 a {
-    /* text-decoration: none; */
+    text-decoration: none;
 }
 
 ol, ul, li {
-    /* list-style: none; */
+    list-style: none;
 }
 
 html {
-    /* font-size: 62.5%; */
+    font-size: 62.5%;
 }
 
 html:focus-within {
-    /* scroll-behavior: smooth; */
+    scroll-behavior: smooth;
 }
   
 body {
-    /* min-height: 100vh;
+    min-height: 100vh;
     text-rendering: optimizeSpeed;
-    line-height: 1.5; */
+    line-height: 1.5;
 }
 
 img, picture {
-    /* max-width: 100%; */
+    max-width: 100%;
 }
 
 article, aside, footer, header, nav, section {
-	/* display: block; */
+	display: block;
 }
 
 body {
-    /* background-color: #eee;
-    overflow-x: hidden; */
+    background-color: #eee;
+    overflow-x: hidden;
 }
 
 /* Navigation Styling */
 
 /* Step 1: Navigation Bar Styles */
 nav {
-    /* display: ;
-    justify-content: ;
-    align-items: ;
-    flex-wrap: ;
-    flex-direction: ;
-    margin: ; 
-    height: ;
-    position: ; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    margin: 0; 
+    height: auto;
+    background-color: black;
+    position: sticky;
+    padding: 10px
 }
 
 /* Step 2: Navigation Text Styles */
 nav p {
-    /* font-size: ;
-    font-weight: ;
-    color: ;
-    cursor: ;
-    transition: ; */
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--white);
+    cursor: pointer;
+    transition: ;
 }
 
 /* Step 3: Navigation Span Styles */
 nav p span {
-    /* color: ;
-    transition: ; */
+    color: red;
+    transition: ;
 }
 
 /* Step 4: Navigation List Styles */
 nav ul {
-    /* display: ;
-    gap: ;
-    font-size: ;
-    z-index: ; */
+    display: flex;
+    gap: 2rem;
+    font-size: 2rem;
+    z-index: 1;
 }
 
 /* Step 5: Navigation List Item Styles */
 nav ul li {
-    /* border: ;
-    padding: ;
-    border-radius: ;
-    cursor: ;
-    transition: ; */
+    border: 2px solid var(--white);
+    padding: 4px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: ;
 }
 
 /* Step 6: Navigation List Item Hover Styles */
 nav ul li:hover {
-    /* border: ;
-    border-radius: ;
-    transition: ; */
+    border: 2px solid red;
+    border-radius: 5px;
+    transition: ;
 }
 
 /* Step 7: Navigation List Item Anchor Styles */
 nav ul li a {
-    /* color: ;
-    font-weight: ;
-    transition: ; */
+    color: white;
+    font-weight: 500;
+    transition: ;
 }
 
 /* Step 8: Navigation List Item Anchor Hover Styles */
 nav ul li:hover > a {
-    /* color: ;
-    transition: ; */
+    font-weight: 700;
+    transition: ;
 }
 
 /* Step 9: Responsive Styles for Navigation */
@@ -130,7 +132,7 @@ nav ul li:hover > a {
 /* Step 10: Responsive Styles for Hidden Navigation on Small Screens */
 @media only screen and (max-width: 700px) {
     nav ul {
-        /* display: ; */
+        display: none;
     }
 }
 
@@ -138,60 +140,60 @@ nav ul li:hover > a {
 
 /* Step 1: Section Styles */
 section {
-    /* position: ;
-    background-color: ;
-    height: ; */
+    position: relative;
+    background-color: green;
+    height: 250px;
 }
 
 /* Step 2: Content Styles */
 .content {
-    /* position: ;
-    left: ;
-    top: ;
-    transform: ;
-    text-align: ;
-    color: ;
-    width: ; */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    width: 100%;
 }
 
 /* Step 3: Heading Styles */
 .content h2 {
-    /* font-size: ; */
+    font-size: 6rem;
 }
 
 /* Step 4: Paragraph Styles */
 .content p {
-    /* font-size: ; */
+    font-size: 1.8rem;
 }
 
 /* Step 5: Responsive Styles */
 @media only screen and (max-width: 945px) {
     .content h2 {
-        /* font-size: ; */
+        font-size: 5rem;
     }
     
     .content p {
-        /* font-size: ; */
+        font-size: 1.5rem;
     }
 }
 
 @media only screen and (max-width: 680px) {
     .content h2 {
-        /* font-size: ; */
+        font-size: 4rem;
     }
     
     .content p {
-        /* font-size: ; */
+        font-size: 1.3rem;
     }
 }
 
 @media only screen and (max-width: 300px) {
     .content h2 {
-        /* font-size: ; */
+        font-size: 1.3rem;
     }
     
     .content p {
-        /* display: ; */
+        display: hidden;
     }
 }
 
@@ -199,45 +201,45 @@ section {
 
 /* Step 1: Main Content Container Styles */
 .main-content {
-    /* display: ;
-    align-items: ;
-    flex-direction: ;
-    text-align: ;
-    margin: ;
-    gap: ; */
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    text-align: center;
+    margin: 2rem;
+    gap: 5rem;
 }
 
 @media only screen and (max-width: 1124px) {
     .main-content {
-        /* margin: ; */
+        margin: 2rem;
     }
 }
 
 /* Step 2: Blog Section Styles */
 .blog {
-    /* flex: ; */
+    flex: 3 1 auto;
 }
 
 /* Step 3: Sidebar Section Styles */
 .sidebar {
-    /* flex: ; */
+    flex: 1 1 auto;
 }
 
 /* Step 4: Post Styles */
 .post {
-    /* display: ;
-    background-color: ;
-    box-shadow: ;
-    margin-bottom: ;
+    display: flex;
+    background-color: var(--white);
+    box-shadow: 5px 5px 20px var(--black);
+    margin-bottom: 5rem;
     position: ;
-    min-height: ; */
+    min-height: ;
 }
 
 /* Step 5: Post Image Styles */
 .post-image {
-    /* min-height: ;
+    min-height: 100%;
     transition: ;
-    overflow: ; */
+    overflow: ;
 }
 
 /* Step 6: Hover Effect on Post Image */
