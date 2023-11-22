@@ -309,11 +309,12 @@ section {
 /* Step 13: Responsive Styles for Posts */
 @media only screen and (max-width: 500px) {
     .main-content {
-        /* margin: ; */
+        margin: 3rem 3rem;
     }
 
     .post {
         flex-direction: column;
+        margin-bottom: 1rem;
     }
 }
 
@@ -327,13 +328,14 @@ section {
     flex-wrap: wrap;
     align-items: center;
     align-content: center;
+    width: 100%;
     /* background-color: rgb(216, 214, 214); */
 }
 
 /* Step 2: Popular Posts Container Styles */
 .popular-posts-side {
     margin: 1rem 2rem;
-    width: 35rem;
+    width: 100%;
 }
 
 /* Step 3: Popular Posts Heading Styles */
@@ -343,9 +345,14 @@ section {
     font-weight: 700;
     padding-bottom: 1rem;
     padding-top: 1rem;
-    margin-bottom: 1rem;
     background-color: var(--green);
 }
+
+.popular-posts-side h2{
+    margin-bottom: 1rem;
+}
+
+
 
 /* Step 4: Popular Post Styles */
 .popular-post {
@@ -423,7 +430,6 @@ section {
     padding: 5px;
     box-shadow: var(--box-shadow);
     background: rgb(187, 187, 187);
-    border-radius: 10px;
     gap: 2rem;
     justify-content: center;
 }
@@ -454,13 +460,26 @@ section {
 }
 
 /* Step 15: Footer Splitter Styles */
-@media only screen and (max-width: 992px) {
-  .sidebar {
-        /* flex-direction: ; */
+@media only screen and (min-width: 700px) and (max-width: 992px) {
+    .sidebar {
+        flex-direction: row;
     }
 
     .popular-posts-side {
-        /* flex: ; */
+        flex: 1 1 auto;
+    }
+
+    .popular-posts{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        align-content: center;
+        justify-content: center;
+        gap: 0 5rem;
+    }
+
+    .popular-post {
+        width: 40%;
     }
 }
 
