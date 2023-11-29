@@ -473,6 +473,45 @@ section {
     }
 }
 
+@media only screen and (min-width: 1115px){
+    .popular-post{
+        flex-wrap: nowrap;
+        flex-direction: row;
+    }
+
+    .popular-post-image {
+        width: 50%;
+        height: auto;
+    }
+
+    .popular-post-content{
+        text-align: left;
+        margin-left: 1rem;
+    }
+
+}
+
+@media only screen and (min-width: 990px){
+    .popular-post-image {
+        width: 90%;
+        max-width: 220px;
+        height: 15rem;
+    }
+    
+    /* Step 7: Popular Post Image Hover Styles */
+    .popular-post-image img {
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+    }
+
+    .sidebar{
+        background-color: rgb(42, 49, 42);
+        border-radius: 20px;
+        padding: 2rem;
+    }
+}
+
 /* Step 11: Social Side Container Styles */
 .social-side {
     margin: 0;
@@ -537,7 +576,7 @@ section {
     }
 
     .popular-post {
-        width: 40%;
+        width: 45.5%;
     }
 
 }
