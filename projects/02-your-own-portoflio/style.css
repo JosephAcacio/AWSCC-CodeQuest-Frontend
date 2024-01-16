@@ -47,39 +47,72 @@ ol, ul, li {
 }
 
 .nav_bar{
+    width: 100%;
+    height: 70px;
+    background-color: var(--white);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 1.2rem;
+    padding: 0 20px;
+    border-radius: 0 0 10px 10px;
+    margin: 0 auto;
 }
 
-.nav_bar h1{
+
+
+.nav_bar .logo{
     color: var(--orange);
 }
 
-.nav_bar ul{
+.nav .logo{
+    display: none;
+}
+
+.nav{
+    z-index: 1;
+}
+
+.nav ul{
     display: flex;
-    font-size: 1.2rem;
-    gap: 2rem;
-    margin-right: 4.5rem;
-    z-index: 2;
 }
 
-.nav_bar ul li a{
-    padding: 0.5rem 1rem;
+.nav ul li a{
     color: var(--black);
+    display: block;
+    margin: 0 2px;
     font-weight: 600;
-    transition: color 0.2s;
-    transition: all 0.3s;
-    border-radius: 0.7rem;
+    padding: 8px 18px;
+    transition: 0.2s;
+    border-radius: 30px;
 }
 
-.nav_bar ul li a:hover{
+.nav ul li a:hover{
     color: var(--white);
     background-color: var(--black);
     cursor: pointer;
-    padding: 0.5rem 1rem;
 }
+
+.hamburger{
+    display: none;
+    height: fit-content;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.2s;
+    padding: 3px 8px;
+    z-index: 99;
+}
+
+.hamburger:hover{
+    background-color: rgb(73, 72, 71, 0.3);
+}
+
+.hamburger div{
+    width: 30px;
+    height: 2px;
+    background: rgb(0, 0, 0);
+    margin-top: 5px;
+    margin-bottom: 5px;
+} 
 
 .main_content{
     display: flex;
@@ -112,7 +145,7 @@ ol, ul, li {
     position: relative;
     left: 2rem;
     top: -12rem;
-    z-index: 1;
+    z-index: 0;
 }
 
 .main_content .main_img img{
@@ -159,7 +192,6 @@ ol, ul, li {
     height: 15rem;
     max-height: 20rem;
     overflow: hidden;
-
 }
 
 .pic_box .pic_image img{
@@ -182,6 +214,107 @@ ol, ul, li {
 
 
 
+/* Portfolio Section */
+.portfolio{
+    height: auto;
+    background-color: var(--white);
+}
+
+#portfolio{
+    color: var(--black);
+}
+
+.portfolioContainer{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.portfolioContainer .myDetails{
+    padding: 1rem 3rem;
+    border: 4px dotted var(--black);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    line-height: 1.5rem;
+    width: 40%;
+    height: 96vh;
+    position: sticky;
+    top: 1rem;
+    text-align: justify;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.portfolioContainer .myDetails .ul__container{
+    display: flex;
+}
+
+.portfolioContainer .myDetails .ul__container ul{
+    flex-grow: 1;
+    padding-left: 1em;
+}
+
+.portfolioContainer .myDetails .ul__container ul li{
+    list-style-type: '\2705';
+}
+
+
+.portfolioContainer .projectsContainer{
+    width: 60%;
+    height: auto;
+    padding: 0 0 2rem 2rem;
+}
+
+.portfolioContainer .projectsContainer .project{
+    display: flex;
+    flex-direction: column;
+}
+
+.projectsContainer .project .project__img{
+    max-width: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+    margin-bottom: .6rem;
+}
+
+.projectsContainer .project h3{
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.projectsContainer .project .project__img img{
+    object-fit: cover;
+    width: 100%;
+}
+
+.projectsContainer .project .project__text{
+    padding-bottom: 1rem;
+}
+
+.project:not(:first-child){
+    margin-top: 4rem;
+}
+
+.project .project__text{
+    background-color: var(--gray);
+    color: var(--white);
+    padding: 1rem 2rem;
+    text-align: justify;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*Media Queries for Responsive Styling */
@@ -195,11 +328,140 @@ ol, ul, li {
     .container{
         max-width: 1024px;
     }
+    
+    /* .nav_bar ul{
+        margin-left: 10rem;
+    } */
+
+    .main_content .main_img{
+        left: 0;
+    }
+
+    .aboutMe{
+        height: auto;
+    }
+
+    .pic_box{
+        margin-bottom: 4rem;
+
+    }.portfolioContainer .myDetails{
+        padding: 1rem 2rem;
+        width: 50%;
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
 }
 
 @media (max-width: 1024px){
     .container{
         max-width: 768px;
+    }
+
+    /* .nav_bar ul{
+        gap: 1rem;
+    } */
+
+    /* .nav_bar h1,
+    .nav_bar ul li {
+        white-space: nowrap;
+    }
+
+
+    .nav_bar ul li a{
+        padding: 0.5rem 0.5rem;
+    }
+    
+    .nav_bar ul li a:hover{
+        padding: 0.5rem 0.5rem;
+    } */
+
+    .nav{
+        position:absolute;
+        left: -300px;
+        top: 0;
+        z-index: 999;
+        width: 280px;
+        height: 100vh;
+        background-color: var(--white);
+        transition: 0.2s;
+        box-shadow: 2px 0 20px 0 rgba(0,0,0,0.2);
+    }
+
+    #nav_check:checked ~ .nav{
+        left: 0;
+    }
+
+    .nav .logo{
+        display: block;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        margin-left: 30px;
+    }
+
+    .nav ul{
+        display: block;
+        padding: 0 20px;
+        margin-top: 30px;
+    }
+
+    .nav ul li a{
+        margin-bottom: 5px;
+        padding: 10px 15px;
+        border-radius: 5px;
+    }
+
+    .hamburger{
+        display: block;
+    }
+
+    .main_content h1{
+        line-height: 3.5rem;
+    }
+    
+    .main_text h1{
+        font-size: 3.5rem;
+    }
+
+    .main_text p{
+        max-width: 18rem;
+    }
+
+
+    .main_content .main_img{
+        left: -2rem;
+    }
+
+    .pic_box{
+        margin-bottom: 3rem;
+    }
+
+    .pic_box .pic_image{
+        width: 100%;
+        max-height: 15rem;
+        overflow: hidden;
+    }
+    
+    .pic_box .pic_image img{
+        max-width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .pic_box .pic_text p{
+        font-size: 0.8rem;
+    }
+    
+    .aboutMe{
+        height: auto;
+    }
+
+    .portfolioContainer .myDetails{
+        padding: 1rem 1.5rem;
+        width: 50%;
+        font-size: 0.9rem;
+        line-height: 1.1rem;
     }
 }
 
@@ -207,17 +469,268 @@ ol, ul, li {
     .container{
         max-width: 640px;
     }
+
+    .main_content h1{
+        line-height: 3.5rem;
+    }
+    
+    .main_text h1{
+        font-size: 3rem;
+    }
+
+    .main_content .main_img{
+        left: -8rem;
+    }
+
+    .pic_box{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        background-color:var(--black);
+        height: auto;
+        border: 8px solid transparent;
+        margin-bottom: 2rem;
+        border-image: linear-gradient(45deg,var(--gray),var(--gray),var(--orange),var(--gray),var(--gray));
+        border-image-slice: 1;
+    }
+
+    .pics_container{
+        flex-direction: column;
+    }
+
+    .pic_box .pic_image{
+        width: 100%;
+        max-height: 20rem;
+        overflow: hidden;
+    }
+    
+    .pic_box .pic_image img{
+        max-width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .aboutMe{
+        height: auto;
+    }
+
+    .portfolioContainer .myDetails{
+        padding: 1rem 1.5rem;
+        width: 50%;
+        font-size: 0.8rem;
+        line-height: 1rem;
+    }
 }
 
 @media (max-width: 640px){
     .container{
         max-width: 475px;
     }
+
+    .main_content{
+        flex-direction: column-reverse;
+
+    }
+
+    .main_content .main_img{
+        position: relative;
+        left: 1rem;
+        top: -12rem;
+        z-index: 0;
+        height: 29rem;
+        overflow: hidden;
+    }
+    
+    .main_content .main_img img{
+        width: 30rem;
+    }
+
+    .main_container{
+        background-image: linear-gradient(to bottom, orange 0%, orange 60%, black 50%, black 100%);
+        height: 100vh;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .main_content .main_text{
+        color: var(--white);
+        margin-top: -12rem;
+        width: 100%;
+        text-align: center;
+        width: 200%;
+        background-color: rgb(0, 0, 0);
+        z-index: 2;
+        padding-top: 3rem;
+        padding-right: 1rem;
+        position: relative;
+        left: -14rem;
+    }
+
+    .main_content .main_text p{
+        margin-top: 2rem;
+        font-size: 1.1rem;
+        max-width: 100%;
+        margin: 1rem auto;
+    }
+
+    .main_content h1{
+        line-height: 3.5rem;
+    }
+    
+    .main_text h1{
+        font-size: 2.5rem;
+    }
+
+    .main_container .container{
+        padding: 0;
+    }
+
+    .pics_container{
+        flex-direction: column;
+    }
+
+    .pic_box{
+        flex-direction: column;
+        width: 90%;
+        margin: auto auto;
+        margin-top: 1.5rem;
+    }
+
+    
+    .pic_box .pic_image{
+        height: 10rem;
+    }
+    
+    
+    .pic_box .pic_text p{
+        font-size: 0.9rem;
+    }
+
+    .aboutMe{
+        height: auto;
+    }
+
+    .pic_box:last-child{
+        margin-bottom: 2rem;
+    }
+
+    
+    .pic_box .pic_image img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .pic_box:last-child .pic_image img{
+        width: 100%;
+        height: 220%;
+    }
+
+    .portfolioContainer{
+        flex-direction: column;
+    }
+
+    .portfolioContainer .myDetails{
+        position: static;
+        width: 100%;
+        height: auto;
+        font-size: 0.9rem;
+    }
+
+    .portfolioContainer .projectsContainer{
+        margin: 4rem 0;
+        width: 100%;
+        padding: 0;
+    }
 }
 
 @media (max-width: 475px){
     .container{
         max-width: 100%;
+    }
+
+    .main_content .main_text{
+        position: static;
+        width: 100%;
+        padding: 0, 0.5rem;
+        padding-left: 1rem;
+        margin-top: -17rem;
+    }
+
+    .main_text h1{
+        font-size: 2rem;
+    }
+
+    .main_content .main_img{
+        position: relative;
+        left: -2rem;
+        top: -8rem;
+        z-index: 0;
+        height: 33.75rem;
+        overflow: hidden;
+    }
+    .main_content .main_img img{
+        width: 28rem;
+    }
+
+    .main_container .container{
+        padding: 0;
+    }
+
+
+    .pics_container{
+        flex-direction: column;
+    }
+
+    .pic_box{
+        flex-direction: column;
+        width: 90%;
+        margin: auto auto;
+        margin-top: 1.5rem;
+    }
+    
+    
+    
+    .pic_box .pic_image{
+        height: 10rem;
+    }
+    
+    
+    
+    .pic_box .pic_text p{
+        font-size: 0.7rem;
+    }
+
+    .aboutMe{
+        height: auto;
+    }
+
+    .pic_box:last-child{
+        margin-bottom: 2rem;
+    }
+
+    .portfolioContainer .myDetails{
+        width: 90%;
+        font-size: 0.8rem;
+        line-height: 1rem;
+        margin: auto;
+        padding: 1rem 1.5rem;
+    }
+
+    .portfolioContainer .projectsContainer{
+        margin: 4rem auto;
+        width: 90%;
+        padding: 0;
+    }
+
+    .project .project__text{
+        font-size: 0.7rem;
+    }
+
+    .projectsContainer .project h3{
+        font-size: 1.5rem;
     }
 }
 

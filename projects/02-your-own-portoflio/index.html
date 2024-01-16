@@ -11,13 +11,26 @@
     <div class="main_container">
         <div class="container">
             <div class="nav_bar">
-                <h1>My Portfolio</h1>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#aboutMe">About Me</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
+                <div class="logo">
+                    <h1>My Portfolio</h1>
+                </div>
+                <input type="checkbox" id="nav_check" hidden>
+                <div class="nav">
+                    <div class="logo">
+                        <h1>My Portfolio</h1>
+                    </div>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#aboutMe">About Me</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <label for="nav_check" class="hamburger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </label>
             </div>
         </div>
         <div class="container main_content">
@@ -32,9 +45,9 @@
             </div>
         </div>
     </div>
-    <div class="aboutMe">
+    <div class="aboutMe" id="aboutMe">
         <div class="container">
-            <h1 class="head_title" id="aboutMe">About me</h1>
+            <h1 class="head_title">About me</h1>
             <div class="pics_container">
                 <div class="pic_box">
                     <div class="pic_image">
@@ -61,6 +74,69 @@
                     <div class="pic_text">
                         <h3>Self-development as top priority</h3>
                         <p>I always seek for improvement. I know that for every subtle efforts that I exert will result in a bigger achievement. Developing oneself is important, but never in a way that compromise your health and boundaries.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio">
+        <div class="container">
+            <h1 class="head_title" id="portfolio">Portfolio</h1>
+            <div class="portfolioContainer">
+                <div class="myDetails">
+                    <h4>I am Joseph C. Acacio, an 18 year-old Computer Science major at Polytechnic University of the Philippines as a freshman.</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam tempore numquam commodi sunt deleniti amet qui culpa molestiae quo animi nihil aliquid vel, a odit corrupti repudiandae porro molestias. Impedit.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo nemo earum eaque. Corporis totam libero aspernatur dolore, obcaecati sint animi pariatur voluptas fugit nemo natus nisi officiis, sunt veritatis vero nobis magni, voluptatibus minima eligendi amet aliquid impedit. Ipsum, sit sunt. Saepe sed consectetur necessitatibus non maxime tempora atque quisquam?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit eveniet doloremque ipsa est culpa delectus, id labore dolores, modi officia iusto laboriosam quaerat praesentium vitae neque obcaecati aspernatur, fugiat ducimus?</p>
+                    <div class="ul__container">
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                        </ul>
+                        <ul>
+                            <li>C</li>
+                            <li>C++</li>
+                            <li>Python</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="projectsContainer">
+                    <div class="project">
+                        <h3>Purrfect Cat Website</h3>
+                        <div class="project__img">
+                            <img src="image/cat.png" alt="">
+                        </div>
+                        <div class="project__text">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur amet nulla eveniet? Illo obcaecati, vitae similique voluptates corporis qui perferendis temporibus ipsum, reiciendis, quia eum porro! Doloremque, molestiae maiores? Suscipit!</p>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <h3>Miss Universe Philippines 2021</h3>
+                        <div class="project__img">
+                            <img src="image/universe.png" alt="">
+                        </div>
+                        <div class="project__text">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur amet nulla eveniet? Illo obcaecati, vitae similique voluptates corporis qui perferendis temporibus ipsum, reiciendis, quia eum porro! Doloremque, molestiae maiores? Suscipit!</p>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <h3>UDM Portal Clone</h3>
+                        <div class="project__img">
+                            <img src="image/udm.png" alt="">
+                        </div>
+                        <div class="project__text">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur amet nulla eveniet? Illo obcaecati, vitae similique voluptates corporis qui perferendis temporibus ipsum, reiciendis, quia eum porro! Doloremque, molestiae maiores? Suscipit!</p>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <h3>Lucky 9</h3>
+                        <div class="project__img">
+                            <img src="image/lucky9.png" alt="">
+                        </div>
+                        <div class="project__text">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur amet nulla eveniet? Illo obcaecati, vitae similique voluptates corporis qui perferendis temporibus ipsum, reiciendis, quia eum porro! Doloremque, molestiae maiores? Suscipit!</p>
+                        </div>
                     </div>
                 </div>
             </div>
