@@ -167,6 +167,10 @@ ol, ul, li {
     margin-top: 2.5rem;
 }
 
+.portfolio .head_title{
+    color: black;
+}
+
 .pics_container{
     display: flex;
     justify-content: space-between;
@@ -304,6 +308,43 @@ ol, ul, li {
     padding: 1rem 2rem;
     text-align: justify;
 }
+
+/* Contact Section */
+
+.contact{
+    background-color: gainsboro;
+    height: auto;
+    padding: 1rem;
+    margin-top: 4rem;
+}
+
+.contact .logo h1{
+    display: flex;
+    justify-content: center;
+}
+
+.contact ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 2rem;
+}
+
+.contact ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 13rem;
+    gap: 1rem;
+}
+
+.contact ul li img{
+    width: 3rem;
+}
+
+
 
 
 
@@ -521,6 +562,10 @@ ol, ul, li {
         font-size: 0.8rem;
         line-height: 1rem;
     }
+
+    .contact ul li img{
+        width: 2rem;
+    }
 }
 
 @media (max-width: 640px){
@@ -644,6 +689,14 @@ ol, ul, li {
         width: 100%;
         padding: 0;
     }
+
+    .contact ul li img{
+        width: 1.5rem;
+    }
+
+    .contact{
+        margin-top: 1rem;
+    }
 }
 
 @media (max-width: 475px){
@@ -731,6 +784,20 @@ ol, ul, li {
 
     .projectsContainer .project h3{
         font-size: 1.5rem;
+    }
+
+    .contact{
+        margin-top: 1rem;
+    }
+
+    .contact ul li{
+        width: 13rem;
+        gap: 1rem;
+        margin-top: -1rem;
+    }
+    
+    .contact ul li img{
+        width: 1.3rem;
     }
 }
 
