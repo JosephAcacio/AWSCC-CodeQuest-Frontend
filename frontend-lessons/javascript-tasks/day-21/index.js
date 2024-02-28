@@ -149,3 +149,32 @@
 //     ```
 
 // *These tasks will help you practice selecting and modifying elements in the DOM using various JavaScript methods. Good luck! 🚀*
+
+//Task1
+let myLink = document.getElementById("myLink");
+myLink.setAttribute("target", "_blank");
+console.log(myLink)
+
+//Task2
+let myDiv = document.getElementById("myDiv");
+
+if(!myDiv.classList.contains("highlight")){
+    myDiv.classList.add("highlight");
+}
+
+console.log(myDiv);
+
+//Task3
+if(myDiv.classList.contains("highlight")){
+    myDiv.classList.remove("highlight");
+}
+console.log(myDiv);
+
+//Task4
+let myParagraph = document.getElementById("myParagraph");
+myParagraph.textContent = "You will be fine";
+
+//Task5
+myParagraph.style.color = "red";
+myParagraph.style.backgroundColor = "lightgray";
+myParagraph.style.fontSize = "18px";

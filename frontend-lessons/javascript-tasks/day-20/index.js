@@ -37,3 +37,64 @@
 // 10. Use a loop to iterate over all paragraphs and assign a different background color from the array to each paragraph.
 
 // *These tasks will help you practice selecting, modifying, creating, and removing elements from the DOM using JavaScript. Good luck! 🌐*
+
+
+// Getting Elements by Tag Name:
+
+//Task1
+//a)
+let parags = document.getElementsByTagName("p");
+for(let i = 0; i < parags.length; i++){
+    console.log(parags[i]);
+}
+
+//b)
+let paragsInfo = document.getElementsByClassName("info");
+for(let i = 0; i < paragsInfo.length; i++){
+    console.log(paragsInfo[i]);
+}
+
+//c)
+let header = document.getElementById( "header" );
+console.log(header);
+
+//d)
+let highlight = document.querySelector(".highlight");
+console.log(highlight);
+
+//Task2
+let secondParag = parags[1];
+secondParag.innerHTML = "Bida ang Saya";
+
+header.style.backgroundColor = "pink";
+
+//Task3
+let newElement = document.createElement("h3");
+let insideText = document.createTextNode("hirap naman nito");
+
+newElement.appendChild(insideText);
+
+document.body.appendChild(newElement);
+
+//Task4
+let firstParag = document.querySelector("p");
+firstParag.remove()
+
+//Task5
+header.addEventListener("click", function(){
+    console.log("Header Clicked");
+})
+
+//Task 6
+let colors = ["blue", "yellow", "red", "pink", "orange"];
+
+for(let i = 0; i < parags.length; i++){
+    parags[i].style.backgroundColor = colors[i];
+}
+
+
+
+
+
+
+
