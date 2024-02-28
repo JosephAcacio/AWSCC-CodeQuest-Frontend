@@ -97,3 +97,27 @@
 
 // *Feel free to customize the messages and actions in the event listeners based on your preferences. This assignment will help you practice working with various event listeners in JavaScript. Good luck! 🚀*
 
+//Task1
+const myButton = document.getElementById("myButton");
+myButton.addEventListener("click", event => {
+    console.log("Button Clicked!");
+})
+
+//Task2
+const doubleClickButton = document.getElementById("doubleClickButton");
+doubleClickButton.addEventListener("dblclick", event => {
+    console.log("Button Double-Clicked!");
+})
+
+//Task3
+const hoverButton = document.getElementById("mouseEnterButton");
+hoverButton.addEventListener("mouseenter", event => {
+    hoverButton.style.backgroundColor = "Black";
+    hoverButton.style.color = "White";
+})
+
+//Task4
+const inputElement = document.getElementById("myInput");
+inputElement.addEventListener('keypress', event =>{
+    console.log("Keypress Event: ", event.key)
+})
