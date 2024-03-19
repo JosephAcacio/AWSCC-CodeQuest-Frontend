@@ -83,3 +83,27 @@
 //    </body>
 //    </html>
 //    ```
+
+//Task1
+let image = document.createElement("img");
+let dynamicContainer = document.getElementById("dynamicContainer");
+
+image.src = "https://www.nme.com/wp-content/uploads/2023/12/song-kang-sweet-home-enlistment-011223.jpg"
+image.width = '500';
+
+dynamicContainer.appendChild(image)
+
+//Task2
+let myList = document.getElementById("myList");
+let toRemove = myList.children[0]
+
+myList.removeChild(toRemove);
+
+let lastchild = myList.lastElementChild;
+lastchild.remove();
+
+myList.innerHTML = '';
+
+
+
+

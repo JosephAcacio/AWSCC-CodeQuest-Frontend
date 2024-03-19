@@ -26,3 +26,53 @@
 
 // These tasks will enhance your understanding of working with objects in JavaScript. Objects are versatile and allow you to structure data in a meaningful way. Best of luck! 🌟
 
+
+//Task1
+let book = {
+    title: 'Hunger Games',
+    author: 'Suzanne Collins',
+    year: 2013,
+};
+console.log(`The author of the ${book.title} year ${book.year} is ${book.author}`);
+
+//Task2
+let student = {
+    name: 'Joseph Acacio',
+    age: 17,
+    grade: 1.00,
+}
+
+student.age = 18;
+student.subjects = ['MMW', 'FPK', 'PurComm'];
+
+//Task3
+let rectangle = {
+    width: 10,
+    lenght: 18,
+    calculateArea: function(){
+       return rectangle.width * rectangle.lenght;
+    },
+}
+
+let rectangleArea = rectangle.calculateArea();
+console.log(rectangleArea);
+
+//Task4
+let person = {
+    name: 'Joseph Acacio',
+    age: 18,
+    address: 'Address ng Bayan',
+}
+
+delete person.address;
+console.log(person);
+
+let employee = {
+    name: 'Marina',
+    position: 'UK Drag Race Winnah'
+}
+
+let employeeDetails = Object.assign({}, person, employee);
+
+console.log(employeeDetails);
+

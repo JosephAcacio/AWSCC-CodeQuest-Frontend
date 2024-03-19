@@ -19,3 +19,28 @@
 // 9. Use the logical **AND** (`&&`) operator to check if it's morning and raining. Print appropriate messages based on the result.
 // 10. Use the logical **OR** (`||`) operator to check if it's either morning or raining. Print appropriate messages based on the result.
 // 11. Use the logical **NOT** (`!`) operator to invert the value of `isMorning`. Print the new value.
+
+//Task 1
+let  currentLesson = "JavaScript Fundamentals";
+console.log(currentLesson);
+
+//Task 2
+let favoriteNumber = 11;
+let favoriteWord = 'Loved';
+let isJavaScriptFun = true;
+let nothing = null;
+let undefinedVar;
+
+//Task 3
+let isMorning = false;
+let isRaining = true;
+
+console.log(`Is it morning and raining? ${isMorning && isRaining}`);
+console.log(`Is it morning or raining? ${isMorning || isRaining}`);
+console.log(`Is it morning? ${!isMorning}`);
+console.log(`Is it raining? ${!isRaining}`);
+
+
+
+
+

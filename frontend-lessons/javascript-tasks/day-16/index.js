@@ -9,3 +9,36 @@
 // 7. Use the `calculateAverage` function with an array of numbers and print the result.
 
 // These are the fundamental concepts of functions in JavaScript. Functions allow you to write modular and reusable code, making your programs more organized and easier to maintain.
+
+// Function with default parameters
+
+function greet(name){
+    console.log(`Hello ${name}! How's your day so far?`);
+}
+
+function addNumbers(a,b){
+    return a + b;
+}
+
+function calculateAverage(number){
+    sum = 0;
+    for(let i = 0;  i < number.length; i++){
+        sum += number[i];
+    }
+    average =  sum / number.length;
+
+    console.log(`The average is: ${average}`);
+}
+
+personName = 'Joseph';
+greet( personName);
+
+numOne = 7;
+numTwo = 8;
+
+sum = addNumbers(numOne,numTwo);
+console.log(`The sum of ${numOne} + ${numTwo} is ${sum}`);
+
+setOfNum = [9, 8, 7, 6, 5];
+
+calculateAverage(setOfNum);
